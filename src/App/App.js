@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
-import { Section } from '../../components/Utils/Utils'
-import MainNav from '../../components/MainNav/MainNav'
-import ReturnNav from '../../components/ReturnNav/ReturnNav'
-import dummyStore from '../../dummy-store.js'
+import { Section } from '../components/Utils/Utils'
+import MainNav from '../components/MainNav/MainNav'
+import ReturnNav from '../components/ReturnNav/ReturnNav'
+import BudgetPage from '../routes/BudgetPage/BudgetPage'
+import dummyStore from '../dummy-store.js'
 import './App.css'
 
 export default class App extends Component {
@@ -48,7 +49,14 @@ export default class App extends Component {
   }
 
   renderMainRoutes = () => {
-    
+    const mainPagePaths = ['/', '/transactions']
+    const returnNavPaths = ['/add-new-category', '/add-new-expense', '/log-new-transaction']
+
+    return (
+      <>
+       
+      </>
+    )
   }
 
   render() {
@@ -59,6 +67,7 @@ export default class App extends Component {
         <main className='App__main'>
           {this.state.hasError && <p className='red'>There was an error! Oh no!</p>}
           {this.renderNavRoutes()}
+          {this.renderMainRoutes()}
         </main>
       </Section>
     )

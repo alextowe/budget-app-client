@@ -10,7 +10,7 @@ export default class MainNav extends Component {
   render() {
     return (
       <nav className="MainNav">
-
+        MainNav
       </nav>
     )
   }

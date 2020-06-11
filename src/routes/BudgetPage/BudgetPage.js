@@ -15,7 +15,7 @@ export default class BudgetPage extends Component {
   render() {
     return (
       <Section className='BudgetPage'>
-
+        BudgetPage
       </Section>
     )
   }
