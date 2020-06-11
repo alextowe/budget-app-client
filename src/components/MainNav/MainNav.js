@@ -8,15 +8,37 @@ export default class MainNav extends Component {
     }
   }
 
-  renderPageLinks() {
-    
-  }
-
   render() {
     const path = this.props.location.pathname
+    const budgetPageLink = 
+      <Link
+        className='MainMenu__budget_page Button'
+        to='/'>
+        Budget Page
+      </Link>
+
+    const transactionsPageLink = 
+      <Link
+        className='MainMenu__transactions_page Button'
+        to='/transactions'>
+        Transactions
+      </Link>
+
+    const addNewCategoryLink = 
+      <Link
+        className='MainMenu__add_new_category_link Button'
+        to='/add-new-category'>
+        Add Category
+      </Link>
+
     return (
       <nav className="MainNav">
-        MainNav
+       <nav className='MainMenu'>
+        { path === '/' ? transactionsPageLink 
+        : path === '/transactions' ? budgetPageLink
+        : ''}
+        {addNewCategoryLink}
+      </nav>
       </nav>
     )
   }
