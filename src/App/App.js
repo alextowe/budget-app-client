@@ -12,7 +12,10 @@ import MainNav from '../components/MainNav/MainNav'
 import ReturnNav from '../components/ReturnNav/ReturnNav'
 
 // routes
+import LoginPage from '../routes/LoginPage/LoginPage'
+import RegistrationPage from '../routes/RegistrationPage/RegistrationPage'
 import BudgetPage from '../routes/BudgetPage/BudgetPage'
+import NewCategoryPage from '../routes/NewCategoryPage/NewCategoryPage'
 
 library.add(fab, faSun, faChevronDown, faChevronUp)
 
@@ -61,6 +64,22 @@ export default class App extends Component {
             exact
             path='/'
             component={BudgetPage}
+          />
+          <Route 
+            path={'/add-new-category'}
+            component={NewCategoryPage}
+          />
+          <Route
+            path={'/login'}
+            component={LoginPage}
+          />
+          <Route 
+            path={'/register'}
+            component={RegistrationPage}
+          />
+          <Route 
+            path={'/register'}
+            component={RegistrationPage}
           />
         </Switch>
       </>

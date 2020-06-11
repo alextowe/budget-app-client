@@ -15,7 +15,7 @@ export default class MainNav extends Component {
       <Link
         className='MainNav__budget Button'
         to='/'>
-        Budget Page
+        Budget
       </Link>
 
     const transactionsPageLink = 
@@ -32,12 +32,21 @@ export default class MainNav extends Component {
         Add Category
       </Link>
 
+    const logNewTransactionLink = 
+      <Link
+        className='MainNav__new_transaction Button'
+        to='log-new-transaction'>
+        Log Transaction
+      </Link>
+
     return (
       <nav className='MainNav'>
         { path === '/' ? transactionsPageLink 
         : path === '/transactions' ? budgetPageLink
         : ''}
-        {addNewCategoryLink}
+        { path === '/' ? addNewCategoryLink 
+        : path === '/transactions' ? logNewTransactionLink
+        : ''}
       </nav>
     )
   }
