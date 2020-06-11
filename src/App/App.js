@@ -74,6 +74,9 @@ export default class App extends Component {
           {this.state.hasError && <p className='red'>There was an error! Oh no!</p>}
           {this.renderMainRoutes()}
         </main>
+        <footer className='App__footer'>
+
+        </footer>
       </Section>
     )
   }
