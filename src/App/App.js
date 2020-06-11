@@ -8,6 +8,7 @@ import './App.css'
 // components
 import { Section } from '../components/Utils/Utils'
 import Header from '../components/Header/Header'
+import Summary from '../components/Summary/Summary'
 import MainNav from '../components/MainNav/MainNav'
 import ReturnNav from '../components/ReturnNav/ReturnNav'
 
@@ -93,6 +94,7 @@ export default class App extends Component {
           <Header />
         </header>
         <aside className='App__aside'>
+          <Summary />
           {this.renderNavRoutes()} 
         </aside>
         <main className='App__main'>

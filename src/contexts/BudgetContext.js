@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 
 const BudgetContext = React.createContext({
+  initial_balance: '1000',
+  ending_balance: null,
   categories: [
     {
       id: '1',
