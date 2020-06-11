@@ -1,0 +1,11 @@
+.MainNav {
+  display: flex;
+  flex-direction: column;
+}
+
+.MainNav .Button {
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  margin-bottom: 1em;
+}

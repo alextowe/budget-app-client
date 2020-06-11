@@ -1,15 +1,20 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faSun, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import './App.css'
 
 // components
 import { Section } from '../components/Utils/Utils'
+import Header from '../components/Header/Header'
 import MainNav from '../components/MainNav/MainNav'
 import ReturnNav from '../components/ReturnNav/ReturnNav'
 
 // routes
 import BudgetPage from '../routes/BudgetPage/BudgetPage'
 
+library.add(fab, faSun, faChevronDown, faChevronUp)
 
 export default class App extends Component {
   state = { 
@@ -51,13 +56,13 @@ export default class App extends Component {
   renderMainRoutes() {
     return (
       <>
-       <Switch>
-         <Route 
-          exact
-          path='/'
-          component={BudgetPage}
-         />
-       </Switch>
+        <Switch>
+          <Route 
+            exact
+            path='/'
+            component={BudgetPage}
+          />
+        </Switch>
       </>
     )
   }
@@ -66,8 +71,9 @@ export default class App extends Component {
     return (
       <Section className='App'>
         <header className='App__header'>
+          <Header />
         </header>
-        <aside className='App_aside'>
+        <aside className='App__aside'>
           {this.renderNavRoutes()} 
         </aside>
         <main className='App__main'>

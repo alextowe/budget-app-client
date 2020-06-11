@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import './MainNav.css'
 
 export default class MainNav extends Component {
   static defaultProps = {
@@ -12,33 +13,31 @@ export default class MainNav extends Component {
     const path = this.props.location.pathname
     const budgetPageLink = 
       <Link
-        className='MainMenu__budget_page Button'
+        className='MainNav__budget Button'
         to='/'>
         Budget Page
       </Link>
 
     const transactionsPageLink = 
       <Link
-        className='MainMenu__transactions_page Button'
+        className='MainNav__transactions Button'
         to='/transactions'>
         Transactions
       </Link>
 
     const addNewCategoryLink = 
       <Link
-        className='MainMenu__add_new_category_link Button'
+        className='MainNav__new_category Button'
         to='/add-new-category'>
         Add Category
       </Link>
 
     return (
-      <nav className="MainNav">
-       <nav className='MainMenu'>
+      <nav className='MainNav'>
         { path === '/' ? transactionsPageLink 
         : path === '/transactions' ? budgetPageLink
         : ''}
         {addNewCategoryLink}
-      </nav>
       </nav>
     )
   }
