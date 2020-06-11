@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Section } from '../../components/Utils/Utils'
-import BudgetContext from '../../contexts/BudgetContext'
 
 export default class Category extends Component {
   state = {
@@ -10,7 +9,7 @@ export default class Category extends Component {
   renderExpenses() {
     const { expenses = [] } = this.props
     return expenses.map(expense => {
-      
+      // display expenses
     })
   }
 
