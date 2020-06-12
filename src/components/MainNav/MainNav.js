@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import Summary from '../../components/Summary/Summary'
 import './MainNav.css'
 
 export default class MainNav extends Component {
@@ -41,6 +42,7 @@ export default class MainNav extends Component {
 
     return (
       <nav className='MainNav'>
+        <Summary />
         { path === '/' ? transactionsPageLink 
         : path === '/transactions' ? budgetPageLink
         : ''}
