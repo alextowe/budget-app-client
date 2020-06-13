@@ -6,19 +6,23 @@ const BudgetContext = React.createContext({
   categories: [
     {
       id: '1',
-      name: 'Income'
+      name: 'Income',
+      expected_amount: null
     },
     {
       id: '2',
-      name: 'Housing'
+      name: 'Housing',
+      expected_amount: null
     },
     {
       id: '3',
-      name: 'Utilities'
+      name: 'Utilities',
+      expected_amount: null
     },
     {
       id: '4',
-      name: 'Car'
+      name: 'Car',
+      expected_amount: null
     }
   ],
   expenses: [

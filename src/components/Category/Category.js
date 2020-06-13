@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ItemHeader from '../ItemHeader/ItemHeader'
 import Expense from '../Expense/Expense'
 import { Section } from '../../components/Utils/Utils'
 import './Category.css'
@@ -34,10 +33,7 @@ export default class Category extends Component {
         <header 
           className='Category__header'
           onClick={ () => this.setState({ open: !open }) }>
-          <ItemHeader 
-            open={open}
-            item={category}
-          />
+          <h3 className='Category__name'>{category.name}</h3>
         </header>
         { open && <ul className='Category__expense_list'>{this.renderExpenses()}</ul>}
       </Section>

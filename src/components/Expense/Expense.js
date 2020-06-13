@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import ItemHeader from '../ItemHeader/ItemHeader'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import ProgressBar from '../ProgressBar/ProgressBar'
 import './Expense.css'
 
 export default class Expense extends Component {
@@ -9,19 +7,24 @@ export default class Expense extends Component {
     open: true,
   }
 
+  renderAmountSection = () => {
+    const { item } = this.props
+    return (
+      <section className='amount_section'>
+        <p className='amount'>
+          ${ item.expected_amount === null ? '0' : item.expected_amount}
+        </p>
+        <ProgressBar />
+      </section>
+    )
+  }
+
   render() {
-    const { open } = this.state
     const { expense } = this.props
     return (
       <li className='Expense'>
-        <header 
-          className='Expense__header'
-          onClick={ () => this.setState({ open: !open }) }>
-          <ItemHeader 
-            item={expense}
-            open={false}
-          />
-        </header>
+        <p className='item_name'>{expense.name}</p>
+        <ProgressBar />
       </li>
     )
   }
