@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
+import ItemHeader from '../ItemHeader/ItemHeader'
+import Expense from '../Expense/Expense'
 import { Section } from '../../components/Utils/Utils'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import './Category.css'
 
 export default class Category extends Component {
@@ -19,9 +19,10 @@ export default class Category extends Component {
     const categoryExpenses = this.filterExpenses(expenses, category.id)
 
     return categoryExpenses.map(expense => (
-      <li className='Expense'>
-        {expense.name}
-      </li>
+      <Expense 
+        key={expense.id}
+        expense={expense}
+      />
     ))
   } 
 
@@ -30,13 +31,15 @@ export default class Category extends Component {
     const { category } = this.props
     return (
       <Section className='Category'>
-        <section 
-          className='Category__top_section'
+        <header 
+          className='Category__header'
           onClick={ () => this.setState({ open: !open }) }>
-          <h3>{category.name}</h3>
-          <FontAwesomeIcon icon={ open ? faChevronUp : faChevronDown }/>
-        </section>
-        { open && <ul>{this.renderExpenses()}</ul>}
+          <ItemHeader 
+            open={open}
+            item={category}
+          />
+        </header>
+        { open && <ul className='Category__expense_list'>{this.renderExpenses()}</ul>}
       </Section>
     )
   }

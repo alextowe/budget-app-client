@@ -1,0 +1,16 @@
+.ItemHeader__top_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ItemHeader__amount_section {
+  display: flex;
+  flex-direction: column;
+}
+
+.ItemHeader__amount {
+  align-self: end;
+  margin-bottom: 0.5em;
+}
