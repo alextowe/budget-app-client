@@ -14,19 +14,13 @@ export default class BudgetPage extends Component {
     const { categories = [] } = this.context
     const { expenses = [] } = this.context
 
-    return categories.map(category => {
-      const categoryExpenses = expenses.filter(expense => 
-        category.id === expense.category_id)
-
-      return (
-        <Category 
-          key={category.id}
-          category={category}
-          expenses={categoryExpenses}
-        />
-      )
-    })
-
+    return categories.map(category => (
+      <Category 
+        key={category.id}
+        category={category}
+        expenses={expenses}
+      />
+    ))
   }
 
   render() {

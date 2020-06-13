@@ -6,18 +6,30 @@ export default class Category extends Component {
     open: true,
   }
 
-  renderExpenses() {
-    const { expenses = [] } = this.props
-    return expenses.map(expense => {
-      // display expenses
-    })
+  filterItems() {
+    const { c } = this.props
   }
 
+  renderExpenses() {
+    const { category } = this.props
+    const { expenses = [] } = this.props
+    const categoryExpenses = expenses.filter(expense => (
+      expense.category_id === category.id
+    ))
+
+    return categoryExpenses.map(expense => (
+      <li className='Expense'>
+        {expense.name}
+      </li>
+    ))
+  } 
+
   render() {
-  
+    const { category } = this.props
     return (
       <Section className='Category'>
-        {this.renderExpenses()}
+        <h2>{category.name}</h2>
+        <ul>{this.renderExpenses()}</ul>
       </Section>
     )
   }
