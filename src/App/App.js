@@ -34,7 +34,7 @@ export default class App extends Component {
 
   renderNavRoutes() {
     const mainNavPaths = ['/', '/transactions']
-    const returnNavPaths = ['/add-new-category', '/add-new-expense', '/log-new-transaction']
+    const returnNavPaths = ['/login', '/register', '/add-new-category', '/add-new-expense', '/log-new-transaction']
 
     return (
       <>
@@ -94,7 +94,6 @@ export default class App extends Component {
           <Header />
         </header>
         <aside className='App__aside'>
-          <Summary />
           {this.renderNavRoutes()} 
         </aside>
         <main className='App__main'>
