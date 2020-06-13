@@ -1,0 +1,17 @@
+.Category {
+  border: 2px solid black;
+  border-radius: 4px;
+  margin-bottom: 2em;
+  padding: 0.6em;
+}
+
+.Category__top_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Category__top_section h3 {
+  margin: 0;
+}
