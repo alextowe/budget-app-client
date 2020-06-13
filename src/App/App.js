@@ -8,7 +8,6 @@ import './App.css'
 // components
 import { Section } from '../components/Utils/Utils'
 import Header from '../components/Header/Header'
-import Summary from '../components/Summary/Summary'
 import MainNav from '../components/MainNav/MainNav'
 import ReturnNav from '../components/ReturnNav/ReturnNav'
 
@@ -93,11 +92,9 @@ export default class App extends Component {
         <header className='App__header'>
           <Header />
         </header>
-        <aside className='App__aside'>
-          {this.renderNavRoutes()} 
-        </aside>
         <main className='App__main'>
           {this.state.hasError && <p className='red'>There was an error! Oh no!</p>}
+          {this.renderNavRoutes()}
           {this.renderMainRoutes()}
         </main>
         <footer className='App__footer'>
