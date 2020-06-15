@@ -3,10 +3,6 @@ import ProgressBar from '../ProgressBar/ProgressBar'
 import './Expense.css'
 
 export default class Expense extends Component {
-  state = {
-    open: true,
-  }
-
   renderAmountSection = () => {
     const { item } = this.props
     return (
@@ -23,7 +19,7 @@ export default class Expense extends Component {
     const { expense } = this.props
     return (
       <li className='Expense'>
-        <p className='item_name'>{expense.name}</p>
+        <p className='Expense__name'>{expense.name}</p>
         <ProgressBar />
       </li>
     )

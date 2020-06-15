@@ -4,10 +4,6 @@ import { Section } from '../../components/Utils/Utils'
 import './Category.css'
 
 export default class Category extends Component {
-  state = {
-    open: true,
-  }
-
   filterExpenses(expenses, category_id) {
     return expenses.filter(expense => expense.category_id === category_id)
   }
@@ -26,16 +22,11 @@ export default class Category extends Component {
   } 
 
   render() {
-    const { open } = this.state
     const { category } = this.props
     return (
       <Section className='Category'>
-        <header 
-          className='Category__header'
-          onClick={ () => this.setState({ open: !open }) }>
-          <h3 className='Category__name'>{category.name}</h3>
-        </header>
-        { open && <ul className='Category__expense_list'>{this.renderExpenses()}</ul>}
+        <h3 className='Category__name'>{category.name}</h3>
+        <ul className='Category__expense_list'>{this.renderExpenses()}</ul>
       </Section>
     )
   }

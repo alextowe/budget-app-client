@@ -1,9 +1,5 @@
-.MainNav {
-  display: flex;
-  flex-direction: column;
-}
-
-.MainNav .Button {
+.MainNav > .Button {
+  display: block;
   text-align: center;
   color: black;
   text-decoration: none;

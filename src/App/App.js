@@ -8,8 +8,6 @@ import './App.css'
 // components
 import { Section } from '../components/Utils/Utils'
 import Header from '../components/Header/Header'
-import MainNav from '../components/MainNav/MainNav'
-import ReturnNav from '../components/ReturnNav/ReturnNav'
 
 // routes
 import LoginPage from '../routes/LoginPage/LoginPage'
@@ -31,32 +29,7 @@ export default class App extends Component {
     return { hasError: true }
   }
 
-  renderNavRoutes() {
-    const mainNavPaths = ['/', '/transactions']
-    const returnNavPaths = ['/login', '/register', '/add-new-category', '/add-new-expense', '/log-new-transaction']
-
-    return (
-      <>
-        {mainNavPaths.map(path => (
-          <Route 
-            exact
-            path={path}
-            component={MainNav}
-          />
-        ))}
-
-        {returnNavPaths.map(path => (
-          <Route 
-            path={path}
-            component={ReturnNav}
-          />
-        ))}
-      </>
-    )
-
-  }
-
-  renderMainRoutes() {
+  renderRoutes() {
     return (
       <>
         <Switch>
@@ -94,8 +67,7 @@ export default class App extends Component {
         </header>
         <main className='App__main'>
           {this.state.hasError && <p className='red'>There was an error! Oh no!</p>}
-          {this.renderNavRoutes()}
-          {this.renderMainRoutes()}
+          {this.renderRoutes()}
         </main>
         <footer className='App__footer'>
 
