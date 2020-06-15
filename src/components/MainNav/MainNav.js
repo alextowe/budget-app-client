@@ -11,7 +11,6 @@ export default class MainNav extends Component {
 
   render() {
     const path = this.props.path
-    console.log(path)
     const budgetPageLink = 
       <Link
         className='MainNav__budget Button'
