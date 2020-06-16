@@ -2,3 +2,9 @@
   height: 0.6em;
   background-color: lightgrey;
 }
+
+.ProgressBar__progress {
+  background-color: green;
+  width: 50%;
+  height: 100%;
+}
