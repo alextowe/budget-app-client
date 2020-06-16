@@ -11,7 +11,6 @@ export default class ProgressBar extends Component {
         <div 
           className='ProgressBar__progress' 
           style={{ width: `${(actual / expected) * 100}%` }}>
-
         </div>
       </Section>
     )
