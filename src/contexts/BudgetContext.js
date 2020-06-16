@@ -7,22 +7,18 @@ const BudgetContext = React.createContext({
     {
       id: '1',
       name: 'Income',
-      expected_amount: null
     },
     {
       id: '2',
       name: 'Housing',
-      expected_amount: null
     },
     {
       id: '3',
       name: 'Utilities',
-      expected_amount: null
     },
     {
       id: '4',
       name: 'Car',
-      expected_amount: null
     }
   ],
   expenses: [
@@ -31,7 +27,7 @@ const BudgetContext = React.createContext({
       name: 'Paycheck 1',
       category_id: '1',
       expected_amount: '1700',
-      actual_amount: null,
+      actual_amount: 1700,
       due_date: new Date()
     },
     {
@@ -39,7 +35,7 @@ const BudgetContext = React.createContext({
       name: 'Rent',
       category_id: '2',
       expected_amount: '1200',
-      actual_amount: null,
+      actual_amount: '1200',
       due_date: new Date()
     },
     {
@@ -47,7 +43,7 @@ const BudgetContext = React.createContext({
       name: 'Electricity',
       category_id: '3',
       expected_amount: '100',
-      actual_amount: null,
+      actual_amount: '84',
       due_date: new Date()
     },
     {
@@ -55,7 +51,7 @@ const BudgetContext = React.createContext({
       name: 'Gas',
       category_id: '4',
       expected_amount: '120',
-      actual_amount: null,
+      actual_amount: '102',
       due_date: new Date()
     },
     {
@@ -63,7 +59,7 @@ const BudgetContext = React.createContext({
       name: 'Renters Insurance',
       category_id: '2',
       expected_amount: '25',
-      actual_amount: null,
+      actual_amount: '25',
       due_date: new Date()
     },
     {
@@ -71,7 +67,7 @@ const BudgetContext = React.createContext({
       name: 'Water',
       category_id: '3',
       expected_amount: '150',
-      actual_amount: null,
+      actual_amount: '98',
       due_date: new Date()
     },
     {
@@ -79,7 +75,7 @@ const BudgetContext = React.createContext({
       name: 'Car Insurance',
       category_id: '4',
       expected_amount: '70',
-      actual_amount: null,
+      actual_amount: '70',
       due_date: new Date()
     },
     {
@@ -87,7 +83,7 @@ const BudgetContext = React.createContext({
       name: 'Phone Bill',
       category_id: '3',
       expected_amount: '50',
-      actual_amount: null,
+      actual_amount: '50',
       due_date: new Date()
     }
   ],

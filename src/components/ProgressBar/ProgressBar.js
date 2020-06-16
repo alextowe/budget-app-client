@@ -6,10 +6,11 @@ import './ProgressBar.css'
 export default class ProgressBar extends Component {
   render() {
     const { expected, actual } = this.props
-    console.log(expected, actual)
     return (
       <Section className='ProgressBar'>
-        <div className='ProgressBar__progress'>
+        <div 
+          className='ProgressBar__progress' 
+          style={{ width: `${(actual / expected) * 100}%` }}>
 
         </div>
       </Section>
